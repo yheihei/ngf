@@ -108,23 +108,23 @@ Template Name: トップページ
         });
       </script>
       <?php 
-      ////////////////////////////
-      //除外する過去記事タグ処理
-      ////////////////////////////
-      $define_not_tag_names = array(
-        '2017','2018'
-      );
-      
-      $tags = get_tags();
-      $not_tag_ids = array();
-      
-      foreach ( $tags as $tag ) {
-        if (in_array($tag->name, $define_not_tag_names)) {
-          // 除外する過去記事タグであった場合、tag_idを保存
-          $not_tag_ids[] = $tag->term_taxonomy_id;
-        }
-      }
-      ?>
+			/**
+			 * 除外する過去記事タグ処理.
+			 */
+			$ignore_tag_names = array(
+				'2017',
+				'2018',
+				'2019',
+			);
+			$current_tags   = get_tags();
+			$ignore_tag_ids = array();
+			foreach ( $current_tags as $current_tag ) {
+				if ( in_array( $current_tag->name, $ignore_tag_names, true ) ) {
+					// 除外する過去記事タグであった場合、tag_idを保存.
+					$ignore_tag_ids[] = $current_tag->term_taxonomy_id;
+				}
+			}
+			?>
       <div class="owl-carousel owl-theme">
         <?php
           //　--------- 投稿情報を表示　---------
@@ -132,7 +132,7 @@ Template Name: トップページ
             'post_type' => 'post', //カスタム投稿名
             'posts_per_page' => 6,        // 表示数
             'tag' => 'notice',
-            'tag__not_in' => $not_tag_ids, // タグを含まない
+            'tag__not_in' => $ignore_tag_ids, // タグを含まない
           );
           $the_query = new WP_Query( $args );// 新規WP query を作成　変数args で定義したパラメータを参照
           if ( $the_query->have_posts() ) :
@@ -269,7 +269,7 @@ Template Name: トップページ
             'post_type' => 'post', //カスタム投稿名
             'posts_per_page' => 4,        // 表示数
             'category_name' => 'artists',
-            'tag__not_in' => $not_tag_ids, // タグを含まない
+            'tag__not_in' => $ignore_tag_ids, // タグを含まない
           );
           $the_query = new WP_Query( $args );// 新規WP query を作成　変数args で定義したパラメータを参照
           if ( $the_query->have_posts() ) : ?>
@@ -311,7 +311,7 @@ Template Name: トップページ
             'post_type' => 'post', //カスタム投稿名
             'posts_per_page' => 6,        // 表示数
             'category_name' => 'performance',
-            'tag__not_in' => $not_tag_ids, // タグを含まない
+            'tag__not_in' => $ignore_tag_ids, // タグを含まない
           );
           $the_query = new WP_Query( $args );// 新規WP query を作成　変数args で定義したパラメータを参照
           if ( $the_query->have_posts() ) :
@@ -353,7 +353,7 @@ Template Name: トップページ
                 'post_type' => 'post', //カスタム投稿名
                 'posts_per_page' => 6,        // 表示数
                 'category_name' => 'column',
-                'tag__not_in' => $not_tag_ids, // タグを含まない
+                'tag__not_in' => $ignore_tag_ids, // タグを含まない
               );
               $the_query = new WP_Query( $args );// 新規WP query を作成　変数args で定義したパラメータを参照
               if ( $the_query->have_posts() ) :
