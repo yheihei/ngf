@@ -396,17 +396,11 @@ header {
 }
 
 #cover {
-  height : 560px;
   margin-top: 95px; //固定メニューの高さ分マージン
   background-color: gray;
   overflow: hidden;
   @media (max-width: 425px) {
     margin-top: 80px;
-  }
-  @media (max-width: 759px) {
-    height: 280px;
-    background-image: url("img/cover.png");
-    background-size: cover;
   }
   
   position: relative;
@@ -424,6 +418,24 @@ header {
     }
   }
 }// #cover
+
+.cover {
+  height : 560px;
+  @media (max-width: 759px) {
+    height: 280px;
+    background-image: url("img/cover.png");
+    background-size: cover;
+  }
+  &--large-height {
+    height: 800px;
+    @media (max-width: 759px) {
+      height: 400px;
+    }
+  }
+  &__image {
+    position: absolute;
+  }
+}
 
 #cover.archive {
   height : 120px;

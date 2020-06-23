@@ -1,5 +1,5 @@
 <?php get_header(); //header.phpを取得 ?>
-    <section id="cover" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/cover.png');background-size: cover;">
+    <section id="cover" class="cover" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/cover.png');background-size: cover;">
       <div class="coverinfo">
         <h2>NGF2019開催決定</h2>
         <p><a href="<?php echo home_url();?>">2019/8/3</a></p>

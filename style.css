@@ -419,7 +419,6 @@ header {
 }
 
 #cover {
-  height: 560px;
   margin-top: 95px;
   background-color: gray;
   overflow: hidden;
@@ -428,13 +427,6 @@ header {
 @media (max-width: 425px) {
   #cover {
     margin-top: 80px;
-  }
-}
-@media (max-width: 759px) {
-  #cover {
-    height: 280px;
-    background-image: url("img/cover.png");
-    background-size: cover;
   }
 }
 #cover img {
@@ -451,6 +443,28 @@ header {
   #cover #player {
     display: none;
   }
+}
+
+.cover {
+  height: 560px;
+}
+@media (max-width: 759px) {
+  .cover {
+    height: 280px;
+    background-image: url("img/cover.png");
+    background-size: cover;
+  }
+}
+.cover--large-height {
+  height: 800px;
+}
+@media (max-width: 759px) {
+  .cover--large-height {
+    height: 400px;
+  }
+}
+.cover__image {
+  position: absolute;
 }
 
 #cover.archive {
