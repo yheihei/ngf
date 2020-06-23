@@ -55,9 +55,7 @@ Template Name: トップページ
 					}
 				</script>
 			<?php endif; ?>
-			<div class="wrap">
-				<img class="cover__image" src='<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020_text.png'>
-			</div>
+			<img class="cover__image" src='<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020_text.png'>
     </section>
     <main class="container">
       <section class="white_back devider">
