@@ -442,12 +442,15 @@ header {
 .cover {
   height: 560px;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
 }
 @media (max-width: 759px) {
   .cover {
     height: 280px;
     background-image: url("img/cover.png");
-    background-size: cover;
   }
 }
 .cover--large-height {
@@ -458,7 +461,7 @@ header {
     height: 400px;
   }
 }
-.cover__image {
+.cover__headline-image {
   position: absolute;
   top: 50%;
   left: 50%;

@@ -7,13 +7,8 @@ Template Name: トップページ
 	<?php
 		$is_movie_play = false;
 	?>
-		<section id="cover" style="
-			background-image:url('<?php echo get_template_directory_uri();?>/img/cover_2020.jpg');
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-color: white;
-		" class="cover cover--large-height" >
+		<section id="cover" style="background-image:url('<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020.jpg');"
+			class="cover cover--large-height" >
 			<?php if ( $is_movie_play ) : ?>
 				<div id="player">
 					<div class="wrap">
@@ -55,7 +50,7 @@ Template Name: トップページ
 					}
 				</script>
 			<?php endif; ?>
-			<img class="cover__image" src='<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020_text.png'>
+			<img class="cover__headline-image" src='<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020_text.png'>
     </section>
     <main class="container">
       <section class="white_back devider">
