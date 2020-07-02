@@ -1,7 +1,10 @@
 <?php
-/*
-Template Name: トップページ
-*/
+/**
+ * アーティスト一覧ページ
+ *
+ * @package NGF
+ */
+
 ?>
 <?php get_header(); //header.phpを取得 ?>
 
@@ -28,7 +31,7 @@ Template Name: トップページ
             //除外する過去記事タグ処理
             ////////////////////////////
             $define_not_tag_names = array(
-              '2017','2018',
+              '2017','2018', '2019',
             );
             
             $tags = get_tags();
