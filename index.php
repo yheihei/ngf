@@ -4,53 +4,54 @@ Template Name: トップページ
 */
 ?>
 <?php get_header(); //header.phpを取得 ?>
-    <section id="cover" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/cover.png');background-size: cover;">
-      <!--<div class="coverinfo">-->
-      <!--  <h2>NGF2018開催決定</h2>-->
-      <!--  <p>2018/8/4</p>-->
-      <!--  <p class="right"><a href="2017top">2017情報はこちら</a></p>-->
-      <!--</div>-->
-      <div id="player">
-        <div class="wrap">
-          
-          
-        </div>
-      </div>
+	<?php
+		$is_movie_play = false;
+	?>
+		<section id="cover" style="background-image:url('<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020.jpg');"
+			class="cover cover--large-height" >
+			<?php if ( $is_movie_play ) : ?>
+				<div id="player">
+					<div class="wrap">
+						<!-- 動画コンテンツが挿入される -->
+					</div>
+				</div>
+				<script>
+					var tag = document.createElement('script');
+
+					tag.src = "https://www.youtube.com/iframe_api";
+					var firstScriptTag = document.getElementsByTagName('script')[0];
+					firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+					var player;
+					function onYouTubeIframeAPIReady() {
+						player = new YT.Player('player', {
+						height: '473',
+							width: '840',
+							videoId: 'I6MrGIldd_k',
+							playerVars:{
+								'rel': '0',
+								'showinfo': '0',
+								'loop': '1',
+								'controls': 0,
+							},
+							events: {
+								'onReady': onPlayerReady,
+								'onStateChange': onPlayerStateChange
+							}
+						});
+					}
+
+					function onPlayerReady(event) {
+						event.target.playVideo();
+						event.target.mute();
+					}
+
+					function onPlayerStateChange(event) {
+					}
+				</script>
+			<?php endif; ?>
+			<img class="cover__headline-image" src='<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020_text.png'>
     </section>
-    <script>
-    var tag = document.createElement('script');
-    
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-      height: '473',
-        width: '840',
-        videoId: 'I6MrGIldd_k',
-        playerVars:{
-          'rel': '0',
-          'showinfo': '0',
-          'loop': '1',
-          'controls': 0,
-        },
-        events: {
-          'onReady': onPlayerReady,
-          'onStateChange': onPlayerStateChange
-        }
-      });
-    }
-    
-    function onPlayerReady(event) {
-      event.target.playVideo();
-      event.target.mute();
-    }
-    
-    function onPlayerStateChange(event) {
-    }
-    </script>
     <main class="container">
       <section class="white_back devider">
         

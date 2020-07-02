@@ -12,7 +12,7 @@ $old_header_youtube_video_id = get_query_var( 'old_header_youtube_video_id', '' 
 $old_event_date              = get_query_var( 'old_event_date', '' );
 $old_about_content           = get_query_var( 'old_about_content', '' );
 ?>
-<section id="cover" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/cover.png');background-size: cover;">
+<section id="cover" class="cover" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/cover.png');background-size: cover;">
 	<div class="coverinfo">
 		<h2>NGF<?php echo esc_html( $old_year ); ?>満員御礼</h2>
 		<p><a href="<?php echo home_url();?>">最新のNGFを確認する</a></p>
