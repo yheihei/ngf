@@ -1,60 +1,15 @@
-      <section id="cv">
+<?php
+/**
+ * フッターテンプレート
+ *
+ * @package ngf
+ */
+
+?>
+			<section id="cv">
         <div class="wrap">
           <div class="flex_container">
-            <div id="ticket">
-              <h2>Ticket</h2>
-              <hr>
-              <div class="ja">チケット</div>
-              <h3>チケット情報</h3>
-              <p><b>2019年8月3日（土）　昼夜２公演</b></br></p>
-              <table class="table2" border=1>
-                <tr><th class="first">公演</th><th class="second">開演</th><th>開場</th><th>一般</th><th>学生</th><th>チャリティシート</th></tr>
-                <tr><td><b>第1部</b></td><td>14:00</td><td>(13:30)</td><td>2,500円</td><td>1,500円</td><td>2,750円</td></tr>
-                <tr><td><b>第2部</b></td><td>18:00</td><td>(17:30)</td><td>3,000円</td><td>1,800円</td><td>3,300円</td></tr>
-              </table>
-              <div class="set">
-                <div class="title">
-                  昼夜セット券
-                </div>
-                <div class="price">
-                  5,000円
-                </div>
-                <div class="note">
-                  ※学生及びチャリティシートのセット券はございません。
-                </div>
-              </div>
-              <div class="m_note">
-                ※学生及びチャリティシートのセット券はございません。
-              </div>
-              <p class="note">●各自由席。  ●チャリティーシート…A・B席中央23列限定の指定席。</br>
-●本公演はハーフ60の設定を行いません。  ●各部休憩を含む上演2時間程度の予定。</p>
-              <p>チケット発売日<br>
-              5月19日（日） 10:00より<br>
-</p>
-              <h3>チケット販売</h3>
-              <ul>
-                <li>
-                  <div class="flex_container">
-                    <div class="ticket_info soji">
-                      <p><a href="http://www.munetsuguhall.com/ticket/index2.php">宗次ホールチケットセンター</a></br><small>(営業時間 10:00 〜 16:00)</small></p>
-                    </div>
-                    <div class="contact soji">
-                      <p><i class="fa fa-phone-square" aria-hidden="true"></i> <a href="tel:0522651718">052-265-1718</a></p>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex_container">
-                    <div class="ticket_info">
-                      <p><a href="https://t.pia.jp/pia/event/event.do?eventCd=1921847">チケットぴあ</a></p>
-                    </div>
-                    <div class="contact clearfix">
-                      <p><i class="fa fa-phone-square" aria-hidden="true"></i> <a href="tel:0570029999">0570-02-9999</a></p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+						<?php dynamic_sidebar( 'ngf_ticket' ); ?>
             <div id="access">
               <h2>Access</h2>
               <hr>

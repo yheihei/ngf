@@ -280,3 +280,15 @@ function ngf_settings_page() {
   </div>
 <?php
 }
+
+/**
+ * チケットウィジェットの設定
+ */
+register_sidebar(
+	array(
+		'name'          => 'チケットエリアの内容',
+		'id'            => 'ngf_ticket',
+		'before_widget' => '<div id="ticket">',
+		'after_widget'  => '</div>',
+	)
+);
