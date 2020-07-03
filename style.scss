@@ -1573,3 +1573,18 @@ ul.related_post.wp_rp {
   
 }
 
+.coming-soon {
+	display: block;
+	min-height: 250px;
+	position: relative;
+	&__headline {
+		position: absolute;
+		text-align: center;
+		@include fontsize(21);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+	}
+}

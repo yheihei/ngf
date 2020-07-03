@@ -295,7 +295,9 @@ Template Name: トップページ
             </div>
           <?php
           else: ?>
-            <p>Coming Soon...</p>
+						<div class="coming-soon">
+							<p class="coming-soon__headline">Coming Soon...</p>
+						</div>
           <?php endif;
           wp_reset_postdata();
           ?>
@@ -337,7 +339,9 @@ Template Name: トップページ
             <a href="<?php echo esc_url( home_url() ); ?>/category/performance/">...More</a>
           </div>
           <?php else: ?>
-          <p>Coming Soon...</p>
+						<div class="coming-soon">
+							<p class="coming-soon__headline">Coming Soon...</p>
+						</div>
           <?php endif;
           wp_reset_postdata();
           ?>
