@@ -48,8 +48,7 @@
 						);
 						$the_query = new WP_Query( $args ); // 新規WP query を作成変数argsで定義したパラメータを参照.
 						if ( $the_query->have_posts() ) :
-						// ここから表示する内容を記入.
-						?>
+							?>
 							<div class="flex_container">
 								<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									<?php $catch_copy = get_post_meta(get_the_ID() , 'catch_copy' , true); ?>
@@ -80,10 +79,10 @@
 										wp_reset_postdata();
 										?>
 							</div>
-				<?php else: ?>
-					<div class="coming-soon">
-						<p class="coming-soon__headline">Coming Soon...</p>
-					</div>
-				<?php endif; ?>
+						<?php else : ?>
+							<div class="coming-soon">
+								<p class="coming-soon__headline">Coming Soon...</p>
+							</div>
+						<?php endif; ?>
 			</section>
 <?php get_footer(); // footer.phpを取得. ?>
