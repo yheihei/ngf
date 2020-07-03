@@ -302,3 +302,15 @@ register_sidebar(
 		'after_widget'  => '</div>',
 	)
 );
+
+/**
+ * 必要なスクリプトをheadに挿入
+ */
+function meta_headcustomtags() {
+	$google_map_api_key = NGF_GOOGLE_MAP_API_KEY ?? '';
+	$headcustomtag      = <<< EOM
+<script src="//maps.google.com/maps/api/js?sensor=true&key=${google_map_api_key}&callback"></script>
+EOM;
+	echo $headcustomtag;
+}
+add_action( 'wp_head', 'meta_headcustomtags', 99 );
