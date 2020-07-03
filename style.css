@@ -1759,7 +1759,7 @@ ul.related_post.wp_rp li a {
 
 .coming-soon {
   display: block;
-  height: 400px;
+  min-height: 250px;
   position: relative;
 }
 .coming-soon__headline {

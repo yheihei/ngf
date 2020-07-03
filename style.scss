@@ -1575,7 +1575,7 @@ ul.related_post.wp_rp {
 
 .coming-soon {
 	display: block;
-	height: 400px;
+	min-height: 250px;
 	position: relative;
 	&__headline {
 		position: absolute;
