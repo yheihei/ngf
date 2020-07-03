@@ -161,8 +161,8 @@ Template Name: トップページ
         <div class="wrap">
           <div class="card">
             <div class="title">
-              <h1>名古屋ギターフェスティバル 2019</h1>
-              <p><time>2019.8.3(土)</time> 名古屋・栄 宗次ホール</p>
+              <h1>名古屋ギターフェスティバル 2020</h1>
+              <p><time>2020.9.5(土)</time> 名古屋・栄 宗次ホール</p>
             </div>
             <hr noshade>
             <div class="body flex_container">

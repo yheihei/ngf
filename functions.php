@@ -282,6 +282,16 @@ function ngf_settings_page() {
 }
 
 /**
+ * ヘッダウィジェット
+ */
+register_sidebar(
+	array(
+		'name'          => '<head>に挿入するコンテンツ',
+		'id'            => 'ngf_head',
+	)
+);
+
+/**
  * チケットウィジェットの設定
  */
 register_sidebar(

@@ -24,7 +24,8 @@
     <link href="//fonts.googleapis.com/css?family=Tangerine:700" rel="stylesheet">
 
     <!-- Owl Carousel JS -->
-    <script src="<?php echo get_template_directory_uri(); ?>/owlcarousel/owl.carousel.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/owlcarousel/owl.carousel.min.js"></script>
+		<?php dynamic_sidebar( 'ngf_head' ); ?>
     <?php wp_head(); //wp_headはテーマの</head>タグ直前に必ず挿入します ?>
   </head>
 
