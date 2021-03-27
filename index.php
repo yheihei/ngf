@@ -50,7 +50,7 @@ Template Name: トップページ
 					}
 				</script>
 			<?php endif; ?>
-			<img class="cover__headline-image" src='<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020_text.png'>
+			<img class="cover__headline-image" src='<?php echo esc_attr( get_template_directory_uri() ); ?>/img/webtop_word_2021.png'>
     </section>
     <main class="container">
       <section class="white_back devider">
@@ -161,8 +161,8 @@ Template Name: トップページ
         <div class="wrap">
           <div class="card">
             <div class="title">
-              <h1>名古屋ギターフェスティバル 2020</h1>
-              <p><time>2020.9.5(土)</time> 名古屋・栄 宗次ホール</p>
+              <h1>名古屋ギターフェスティバル 2021</h1>
+              <p><time>2021.8.28(土)</time> 名古屋・栄 宗次ホール</p>
             </div>
             <hr noshade>
             <div class="body flex_container">
