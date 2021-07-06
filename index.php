@@ -164,7 +164,6 @@ Template Name: トップページ
               <h1>名古屋ギターフェスティバル 2021</h1>
               <p><time>2021.8.28(土)</time> 名古屋・栄 宗次ホール</p>
             </div>
-            <hr noshade>
             <div class="body flex_container">
               <div class="info">
                 <h2>About</h2>
