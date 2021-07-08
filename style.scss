@@ -190,9 +190,9 @@ b {
 body {
   font-family : $gothic;
   // background-color: $back-color;
-  background:-moz-linear-gradient(180deg, #D4495B, #841923);
-  background:-webkit-linear-gradient(180deg, #D4495B, #841923);
-  background:linear-gradient(180deg, #D4495B, #841923);
+  background:-moz-linear-gradient(180deg, #3762A4, #2D4371);
+  background:-webkit-linear-gradient(180deg, #3762A4, #2D4371);
+  background:linear-gradient(180deg, #3762A4, #2D4371);
 
 }
 body.ngf2017 {
@@ -599,9 +599,9 @@ main {
         padding: 24px 16px;
       }
       // background-color: $back-color;
-      background: -moz-linear-gradient(top left,  #D4495B, #841923); 
-      background: -webkit-linear-gradient(top left, #D4495B, #841923); 
-      background: linear-gradient(to bottom right, #D4495B, #841923);
+      background: -moz-linear-gradient(left top,  #242843, #3A6AB2); 
+      background: -webkit-linear-gradient(left top, #242843, #3A6AB2); 
+      background: linear-gradient(left top, #242843, #3A6AB2);
       .title {
         h1 {
           color:white;
