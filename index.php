@@ -5,10 +5,10 @@ Template Name: トップページ
 ?>
 <?php get_header(); //header.phpを取得 ?>
 	<?php
-		$is_movie_play = false;
+		$is_movie_play = true;
 	?>
-		<section id="cover" style="background-image:url('<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover_2020.jpg');"
-			class="cover cover--large-height" >
+		<section id="cover" style="background-image:url('<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover.png');"
+			class="cover" >
 			<?php if ( $is_movie_play ) : ?>
 				<div id="player">
 					<div class="wrap">
@@ -23,11 +23,19 @@ Template Name: トップページ
 					firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 					var player;
+					const videoIds = [
+						'VcQjxGRn2S8',
+						'FPYji2Z9xR0',
+						'pZBmbWkwZkY',
+						'HMY28xy8xyI',
+						'1nwXyIrQY4g',
+					];
 					function onYouTubeIframeAPIReady() {
+						const randomIndex = Math.floor(Math.random() * videoIds.length);
 						player = new YT.Player('player', {
 						height: '473',
 							width: '840',
-							videoId: 'I6MrGIldd_k',
+							videoId: videoIds[randomIndex],
 							playerVars:{
 								'rel': '0',
 								'showinfo': '0',
@@ -50,7 +58,6 @@ Template Name: トップページ
 					}
 				</script>
 			<?php endif; ?>
-			<img class="cover__headline-image" src='<?php echo esc_attr( get_template_directory_uri() ); ?>/img/webtop_word_2021.png'>
     </section>
     <main class="container">
       <section class="white_back devider">
