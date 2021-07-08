@@ -190,9 +190,9 @@ b {
 body {
   font-family : $gothic;
   // background-color: $back-color;
-  background:-moz-linear-gradient(180deg, #3762A4, #2D4371);
-  background:-webkit-linear-gradient(180deg, #3762A4, #2D4371);
-  background:linear-gradient(180deg, #3762A4, #2D4371);
+  background:-moz-linear-gradient(to left bottom, #3762A4, #262F4F);
+  background:-webkit-linear-gradient(to left bottom, #3762A4, #262F4F);
+  background:linear-gradient(to left bottom, #3762A4, #262F4F);
 
 }
 body.ngf2017 {
