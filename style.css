@@ -176,9 +176,9 @@ b {
 
 body {
   font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;
-  background: -moz-linear-gradient(180deg, #2B4266, #2B4266);
-  background: -webkit-linear-gradient(180deg, #2B4266, #2B4266);
-  background: linear-gradient(180deg, #2b4266, #2b4266);
+  background: -moz-linear-gradient(180deg, #3762A4, #2D4371);
+  background: -webkit-linear-gradient(180deg, #3762A4, #2D4371);
+  background: linear-gradient(180deg, #3762a4, #2d4371);
 }
 
 body.ngf2017 {
@@ -649,9 +649,9 @@ main #about .card {
   border-top: solid 1px black;
   border-bottom: solid 1px black;
   padding: 24px 20px;
-  background: -moz-linear-gradient(top left, #2B4266, #2B4266);
-  background: -webkit-linear-gradient(top left, #2B4266, #2B4266);
-  background: linear-gradient(to bottom right, #2B4266, #2B4266);
+  background: -moz-linear-gradient(left top, #242843, #3A6AB2);
+  background: -webkit-linear-gradient(left top, #242843, #3A6AB2);
+  background: linear-gradient(to right bottom, #242843, #3a6ab2);
 }
 @media (max-width: 425px) {
   main #about .card {
