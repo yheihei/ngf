@@ -304,6 +304,18 @@ register_sidebar(
 );
 
 /**
+ * バナーウィジェットの設定
+ */
+register_sidebar(
+	array(
+		'name'          => 'バナーエリアの内容',
+		'id'            => 'ngf_banner',
+		'before_widget' => '<div id="banner" class="wrap">',
+		'after_widget'  => '</div>',
+	)
+);
+
+/**
  * 必要なスクリプトをheadに挿入
  */
 function meta_headcustomtags() {

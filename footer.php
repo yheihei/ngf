@@ -22,6 +22,7 @@
           </div>
         </div>
       </section>
+				<?php dynamic_sidebar( 'ngf_banner' ); ?>
       </section>
           </main>
     
