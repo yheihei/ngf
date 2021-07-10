@@ -1138,7 +1138,7 @@ main {
       @media (max-width: 955px) {
         width: 100%;
       }
-      // padding-bottom: 85px;
+      margin-bottom: 20px;
       h3 {
         background-color: #eabd50;
         @include fontsize(12);
@@ -1594,10 +1594,17 @@ ul.related_post.wp_rp {
   justify-content: center;
   @include flex-direction(row);
   @include flex-wrap(wrap);
+  @media (max-width: 768px) {
+    @include flex-direction(column);
+  }
   &__item {
     display: block;
     width: 25%;
     margin: 0 2%;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
     img {
       max-width: 100%;
     }
