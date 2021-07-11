@@ -139,11 +139,11 @@
           <div class="menu_right">
             <div class="share clearfix">
               <ul class="share_ul">
-                <li><a href="http://www.facebook.com/sharer.php?u=<?php echo urlencode("http://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ); ?>&amp;t=<?php wp_title( '|', true, 'right' ); //ページタイトルを出力 ?><?php bloginfo('name'); ?>"
+                <li><a href="https://www.facebook.com/sharer.php?u=<?php echo urlencode("https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ); ?>&amp;t=<?php wp_title( '|', true, 'right' ); //ページタイトルを出力 ?><?php bloginfo('name'); ?>"
                      target="_blank" title="Facebookで共有">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a></li>
-                <li><a href="http://twitter.com/intent/tweet?text=<?php wp_title( ' ', true, 'right' ); //ページタイトルを出力 ?><?php bloginfo('name'); ?>&amp;<?php echo urlencode("http://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]); ?>&amp;url=<?php echo urlencode("http://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]); ?>"
+                <li><a href="https://twitter.com/intent/tweet?text=<?php wp_title( ' ', true, 'right' ); //ページタイトルを出力 ?><?php bloginfo('name'); ?>&amp;<?php echo urlencode("https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]); ?>&amp;url=<?php echo urlencode("https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]); ?>"
                      target="_blank" title="Twitterで共有">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a></li>
