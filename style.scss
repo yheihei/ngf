@@ -1610,3 +1610,19 @@ ul.related_post.wp_rp {
     }
   }
 }
+
+.footer-links {
+  margin: 20px 0;
+  text-align: center;
+  &__ul {
+    font-family: "Cormorant Garamond",serif;
+    font-size: 3.0rem;
+  }
+  & .menu-item {
+    display: inline-block;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

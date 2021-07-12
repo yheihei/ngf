@@ -6,6 +6,10 @@
  */
 
 ?>
+<?php
+	$is_cv = get_query_var( 'is_cv', true );
+?>
+	<?php if ( $is_cv ) : ?>
 			<section id="cv">
         <div class="wrap">
           <div class="flex_container">
@@ -23,6 +27,7 @@
         </div>
       </section>
 				<?php dynamic_sidebar( 'ngf_banner' ); ?>
+	<?php endif; ?>
       </section>
           </main>
     
@@ -53,7 +58,16 @@
             </ul>
           </div>
         </div>
-        <div id="copy">&copy;NAGOYA GUITAR FESTIVAL</div>
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'footer-links',
+							'container_class' => 'footer-links wrap',
+							'menu_class'      => 'footer-links__ul',
+						)
+					);
+					?>
+				<div id="copy">&copy;NAGOYA GUITAR FESTIVAL</div>
       </div>
     </footer>
     <?php wp_footer(); ?>

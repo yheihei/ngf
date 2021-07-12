@@ -104,14 +104,19 @@ add_filter('the_content','add_old_content_notice');
 @ini_set( 'upload_max_size' , '30M' );
 
 
-// カスタムメニューを設定
-function add_custom_menu(){
-	register_nav_menus(array(
-		'global-navi' => 'グローバルナビ',
-		'footer-navi' => 'フッターナビ',
-	));
+/**
+ * メニュー定義
+ */
+function add_custom_menu() {
+	register_nav_menus(
+		array(
+			'global-navi'  => 'グローバルナビ',
+			'footer-navi'  => 'フッターナビ',
+			'footer-links' => 'フッターナビリンク集',
+		)
+	);
 }
-add_action('after_setup_theme','add_custom_menu');
+add_action( 'after_setup_theme', 'add_custom_menu' );
 
 /**
  * カテゴリーページで記事一覧ではなく
