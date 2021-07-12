@@ -15,4 +15,5 @@ set_query_var( 'old_about_content', '名古屋からギター芸術を世界に�
 get_template_part( 'template/top/old', 'index' );
 ?>
 <?php
+set_query_var( 'footer_is_cv', false );
 get_footer(); // footer.phpを取得.
