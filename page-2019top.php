@@ -15,5 +15,5 @@ set_query_var( 'old_about_content', '名古屋だけでなく世界からも素�
 get_template_part( 'template/top/old', 'index' );
 ?>
 <?php
-set_query_var( 'is_cv', false );
+set_query_var( 'footer_is_cv', false );
 get_footer(); // footer.phpを取得.

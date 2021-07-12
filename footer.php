@@ -7,9 +7,9 @@
 
 ?>
 <?php
-	$is_cv = get_query_var( 'is_cv', true );
+	$footer_is_cv = get_query_var( 'footer_is_cv', true );
 ?>
-	<?php if ( $is_cv ) : ?>
+	<?php if ( $footer_is_cv ) : ?>
 			<section id="cv">
         <div class="wrap">
           <div class="flex_container">
