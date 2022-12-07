@@ -6,6 +6,7 @@ Template Name: トップページ
 <?php get_header(); //header.phpを取得 ?>
 	<?php
 		$is_movie_play = true;
+		if ( false ) :
 	?>
 		<section id="cover" style="background-image:url('<?php echo esc_attr( get_template_directory_uri() ); ?>/img/cover.png');"
 			class="cover" >
@@ -59,6 +60,7 @@ Template Name: トップページ
 				</script>
 			<?php endif; ?>
     </section>
+		<?php endif; ?>
     <main class="container">
       <section class="white_back devider">
         
@@ -165,6 +167,7 @@ Template Name: トップページ
       </div>
       
       <section class="white_back">
+			<?php if ( false ) : ?>
       <section id="about" class="clearfix">
         <div class="wrap">
           <div class="card">
@@ -203,7 +206,8 @@ Template Name: トップページ
           </div>
         </div>
       </section>
-      <section id="news_area">
+			<?php endif; ?>
+      <section id="news_area" style="margin-top: 80px; padding-top:20px;">
         <div class="wrap">
           <div class="flex_container">
             <div id="news">
@@ -214,8 +218,9 @@ Template Name: トップページ
               //　--------- 投稿情報を表示　---------
               $args = array(
                 'post_type' => 'post', //カスタム投稿名
-                'posts_per_page' => 3,        // 表示数
+                'posts_per_page' => 8,        // 表示数
                 'category__not_in' => $filter_cat_id,
+								'tag__not_in' => $ignore_tag_ids, // タグを含まない
               );
               $the_query = new WP_Query( $args );// 新規WP query を作成　変数args で定義したパラメータを参照
               if ( $the_query->have_posts() ) :
@@ -241,7 +246,7 @@ Template Name: トップページ
               //　--------- 投稿情報を表示　---------
               $args = array(
                 'post_type' => 'post', //カスタム投稿名
-                'posts_per_page' => 3,        // 表示数
+                'posts_per_page' => 8,        // 表示数
                 'tag' => 'topics',
                 'category__not_in' => $filter_cat_id,
               );
@@ -265,6 +270,7 @@ Template Name: トップページ
         </div>
       </section>
       
+			<?php if ( false ) : ?>
       <section id="artists">
         <div class="wrap">
           <h2>Artists</h2>
@@ -310,7 +316,17 @@ Template Name: トップページ
           ?>
         </div>
       </section>
-      <section id="performances">
+			<?php endif; ?>
+			<section id="performances" style="margin-top: 40px;">
+				<div class="wrap" style="background-color:#EBA567;">
+					<div style="padding: 48px 16px;">
+						<h2 style="font-size: 4rem; margin-bottom: 16px;">チケットのお求め・お問い合せ先</h2>
+						<p style="font-size:2.4rem;"><a href="https://nagoyaguitarfes.stores.jp" target="_blank"><b><u>NGF公式チケットサイト</u></b></a></p>
+						<p style="font-size:1.8rem;">email: nagoya.guitar.fes@gmail.com</p>
+					</div>
+				</div>
+			</section>
+      <section id="performances" style="margin-top: 40px;">
         <div class="wrap">
           <h2>Performance</h2>
           <hr>
@@ -354,7 +370,7 @@ Template Name: トップページ
           ?>
         </div>
       </section>
-      <section id="columun">
+      <section id="columun" style="padding-bottom:40px;">
         <div class="wrap">
           <h2>Column</h2>
           <hr>

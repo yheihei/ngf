@@ -7,7 +7,7 @@ Template Name: トップページ
 
     <main class="container">
       <section class="white_back">
-      <section id="archive">
+      <section id="archive" style="margin-top: 80px;">
         <div class="wrap">
           <?php $tag = get_queried_object(); ?>
           <h2><?php echo $tag->slug; ?></h2>

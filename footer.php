@@ -9,6 +9,7 @@
 <?php
 	$footer_is_cv = get_query_var( 'footer_is_cv', true );
 ?>
+  <?php if ( false ) : ?>
 	<?php if ( $footer_is_cv ) : ?>
 			<section id="cv">
         <div class="wrap">
@@ -29,6 +30,7 @@
 				<?php dynamic_sidebar( 'ngf_banner' ); ?>
 	<?php endif; ?>
       </section>
+  <?php endif; ?>
           </main>
     
     <footer class="container">
