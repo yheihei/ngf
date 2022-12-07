@@ -319,8 +319,8 @@ Template Name: トップページ
 			<?php endif; ?>
 			<section id="performances" style="margin-top: 40px;">
 				<div class="wrap" style="background-color:#EBA567;">
-					<div style="padding: 48px 16px;">
-						<h2 style="font-size: 4rem; margin-bottom: 16px;">チケットのお求め・お問い合せ先</h2>
+					<div style="padding: 32px 16px;">
+						<h2 style="font-size: 3.2rem; margin-bottom: 16px;">チケットのお求め・お問い合せ先</h2>
 						<p style="font-size:2.4rem;"><a href="https://nagoyaguitarfes.stores.jp" target="_blank"><b><u>NGF公式チケットサイト</u></b></a></p>
 						<p style="font-size:1.8rem;">email: nagoya.guitar.fes@gmail.com</p>
 					</div>
