@@ -69,7 +69,7 @@ function add_old_content_notice($the_content) {
 		//除外する過去記事タグ処理
 		////////////////////////////
 		$define_not_tag_names = array(
-			'2017', '2018', '2019',
+			'2017', '2018', '2019', '2021',
 		);
 		
 		$tags = get_the_tags(); // 記事のタグ名を取得

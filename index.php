@@ -123,6 +123,7 @@ Template Name: トップページ
 				'2017',
 				'2018',
 				'2019',
+				'2021',
 			);
 			$current_tags   = get_tags();
 			$ignore_tag_ids = array();
