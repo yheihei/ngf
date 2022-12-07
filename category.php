@@ -15,7 +15,7 @@ Template Name: トップページ
             }?>
           </div>
         </div>
-      <section id="archive">
+      <section id="archive" style="padding-bottom: 40px;">
         <div class="wrap">
           <?php $category = get_queried_object(); ?>
           <h2>
