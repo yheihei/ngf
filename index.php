@@ -207,7 +207,42 @@ Template Name: トップページ
         </div>
       </section>
 			<?php endif; ?>
-      <section id="news_area" style="margin-top: 80px; padding-top:20px;">
+      <section id="performances" style="margin-top: 80px; padding-top:20px;">
+        <div class="wrap">
+          <h2>Events</h2>
+          <hr>
+          <div class="ja">各種イベント情報</div>
+          
+          <div class="flex_container">
+          <?php
+            // イベントカテゴリのIDを取得
+            $parent_category = get_category_by_slug( 'event' );
+            $parent_category_link = get_category_link($parent_category->term_taxonomy_id);
+            if ( $parent_category ) :
+              $child_categories = getCategorysChilds($parent_category->term_id);
+              foreach(array_slice($child_categories, 0, 6) as $child_category): 
+                $category_link = get_category_link($child_category->term_taxonomy_id);
+                $thumbnail = get_category_thumbnail($child_category->term_taxonomy_id);
+          ?>
+                <div class="performance">
+                  <div class="eyecatch">
+                    <a href="<?= $category_link ?>" title="<?= $child_category->name ?>" target="_self">
+                      <img src="<?= $thumbnail ?>">
+                    </a>
+                  </div>
+                  <h3><a href="<?= $category_link ?>" title="<?= $child_category->name ?>" target="_self"><?= $child_category->name ?></a></h3>
+                </div>
+              <?php endforeach; ?>
+          <?php 
+            endif;
+          ?>
+          </div>
+          <div class="more clearfix">
+            <a href="<?= $parent_category_link ?>">...More</a>
+          </div>
+        </div>
+      </section>
+      <section id="news_area" style="margin-top: 40px;">
         <div class="wrap">
           <div class="flex_container">
             <div id="news">

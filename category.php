@@ -70,18 +70,14 @@ Template Name: トップページ
             ?>
             <?php foreach($child_categorys as $child_category): 
               $category_link = get_category_link($child_category->term_taxonomy_id);
-              $post_id = 'category_' . $child_category->term_taxonomy_id;
-              $category_eyecatch_url = get_field(NGF_CATEGORY_EYECATCH,$post_id);      
+              $thumbnail = get_category_thumbnail($child_category->term_taxonomy_id);     
               ?>
               <div class="performance">
                 <div class="eyecatch">
                   <a href="<?= $category_link ?>" title="<?= $child_category->name ?>" target="_self">
-                  <?php if( $category_eyecatch_url ) : ?>
-                    <img src="<?= $category_eyecatch_url ?>">
-                  <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/empty.png">
-                  <?php endif; ?>
-                  </a></div>
+                    <img src="<?= $thumbnail ?>">
+                  </a>
+                </div>
                 <h3><a href="<?= $category_link ?>" title="<?= $child_category->name ?>" target="_self"><?= $child_category->name ?></a></h3>
               </div>
             <?php endforeach; ?>
