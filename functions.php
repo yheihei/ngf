@@ -63,7 +63,8 @@ function is_single_tag($tag_slug) {
  * 古い記事に終演した旨の文章を表示する
  */
 function add_old_content_notice($the_content) {
-	if ( is_single() ) {
+	$tags = get_the_tags(); // 記事のタグ名を取得
+	if ( is_single() && $tags ) {
 		// シングルページかつ古い記事の場合 注釈追加
 		////////////////////////////
 		//除外する過去記事タグ処理
@@ -72,9 +73,7 @@ function add_old_content_notice($the_content) {
 			'2017', '2018', '2019', '2021',
 		);
 		
-		$tags = get_the_tags(); // 記事のタグ名を取得
 		$not_tag_ids = array();
-		
 		foreach ( $tags as $tag ) {
 			if (in_array($tag->name, $define_not_tag_names)) {
 				// 除外する過去記事タグであった場合、注釈を追加
