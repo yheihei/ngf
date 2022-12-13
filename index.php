@@ -289,8 +289,8 @@ Template Name: トップページ
               $args = array(
                 'post_type' => 'post', //カスタム投稿名
                 'posts_per_page' => 8,        // 表示数
-                'tag' => 'topics',
                 'category__not_in' => $filter_cat_id,
+                'tag__not_in' => $ignore_tag_ids, // タグを含まない
               );
               $more_link = home_url() . "/tag/topics/";
               if ($filter_category) {
