@@ -113,12 +113,12 @@ Template Name: トップページ
               </div>
             <?php endwhile; ?>
             </div>
-            <?php if (!is_null(get_previous_posts_link())):?>
+            <?php if (!is_null(get_previous_posts_link("Prev", $the_query->max_num_pages))):?>
             <div class="prev">
               <?php previous_posts_link('<p>< Prev</p>') ?>
             </div>
             <?php endif; ?>
-            <?php if (!is_null(get_next_posts_link())):?>
+            <?php if (!is_null(get_next_posts_link("Next", $the_query->max_num_pages))):?>
             <div class="next">
               <?php next_posts_link('<p>Next ></p>') ?>
             </div>
