@@ -88,9 +88,11 @@ Template Name: トップページ
             
             <?php
             //　--------- 投稿情報を表示　---------
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
             $args = array(
               'category_name' => $category->slug,
               'tag__not_in' => $not_tag_ids, // タグを含まない
+              'paged' => $paged,
             );
             $the_query = new WP_Query( $args );// 新規WP query を作成　変数args で定義したパラメータを参照
             if ( $the_query->have_posts() ) :
