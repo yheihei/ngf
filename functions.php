@@ -241,6 +241,35 @@ function get_the_category_eyecatch_url($current_category_id=0) {
 	return $category_eyecatch_url;
 }
 
+function get_attachment_id_from_url($url) {
+	global $wpdb;
+	$query = 'SELECT ID FROM wp_posts WHERE guid ="'.$url.'"';
+	$id = $wpdb->get_var($query);
+	return $id;
+}
+
+function get_thumbnail_by_url($url) {
+	if (!$url) {
+		return null;
+	}
+	$media_id = get_attachment_id_from_url($url);
+	if (!$media_id) {
+		return null;
+	}
+	$thumbnail_array = wp_get_attachment_image_src(
+		$media_id,
+		'kiji-thumb'
+	);
+	return $thumbnail_array ? $thumbnail_array[0] : null;
+}
+
+function get_category_thumbnail($term_taxonomy_id) {
+	$post_id = 'category_' . $term_taxonomy_id;
+	$category_eyecatch_url = get_field(NGF_CATEGORY_EYECATCH, $post_id);
+	$thumbnail = get_thumbnail_by_url($category_eyecatch_url);
+	return $thumbnail ? $thumbnail : get_template_directory_uri() . "/img/empty.png";
+}
+
 /**
  * トップに表示するカテゴリーやタグの設定
  */
