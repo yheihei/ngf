@@ -211,7 +211,7 @@ Template Name: トップページ
         <div class="wrap">
           <h2>Events</h2>
           <hr>
-          <div class="ja">各種イベント情報</div>
+          <div class="ja">NGF関連イベント情報</div>
           
           <div class="flex_container">
           <?php
@@ -250,6 +250,7 @@ Template Name: トップページ
               <hr>
               <?php
               $filter_cat_id = get_cat_ID( '出演者' ); //出演者のカテゴリーは除外する
+              $filter_category = get_category_by_slug( 'event' );
               //　--------- 投稿情報を表示　---------
               $args = array(
                 'post_type' => 'post', //カスタム投稿名
@@ -257,6 +258,11 @@ Template Name: トップページ
                 'category__not_in' => $filter_cat_id,
 								'tag__not_in' => $ignore_tag_ids, // タグを含まない
               );
+              $more_link = home_url() . "/blog/";
+              if ($filter_category) {
+                $args['cat'] = $filter_category->cat_ID;
+                $more_link = get_category_link($filter_category->term_taxonomy_id);
+              }
               $the_query = new WP_Query( $args );// 新規WP query を作成　変数args で定義したパラメータを参照
               if ( $the_query->have_posts() ) :
               // ここから表示する内容を記入
@@ -269,7 +275,7 @@ Template Name: トップページ
                 <?php endwhile; ?>
               </ul>
               <div class="more">
-                <a href="<?php echo home_url()."/blog/"; ?>">...More</a>
+                <a href="<?php echo $more_link; ?>">...More</a>
               </div>
               <?php endif; ?>
             </div>
@@ -278,6 +284,7 @@ Template Name: トップページ
               <hr>
               <?php
               $filter_cat_id = get_cat_ID( '出演者' ); //出演者のカテゴリーは除外する
+              $filter_category = get_category_by_slug( 'column' );
               //　--------- 投稿情報を表示　---------
               $args = array(
                 'post_type' => 'post', //カスタム投稿名
@@ -285,6 +292,11 @@ Template Name: トップページ
                 'tag' => 'topics',
                 'category__not_in' => $filter_cat_id,
               );
+              $more_link = home_url() . "/tag/topics/";
+              if ($filter_category) {
+                $args['cat'] = $filter_category->cat_ID;
+                $more_link = get_category_link($filter_category->term_taxonomy_id);
+              }
               $the_query = new WP_Query( $args );// 新規WP query を作成　変数args で定義したパラメータを参照
               if ( $the_query->have_posts() ) :
               // ここから表示する内容を記入
@@ -297,7 +309,7 @@ Template Name: トップページ
                 <?php endwhile; ?>
               </ul>
               <div class="more">
-                <a href="<?php echo esc_url( home_url() ); ?>/tag/topics/">...More</a>
+                <a href="<?php echo $more_link; ?>">...More</a>
               </div>
               <?php endif; ?>
             </div>
@@ -361,6 +373,7 @@ Template Name: トップページ
 					</div>
 				</div>
 			</section>
+      <?php if (false) : ?>
       <section id="performances" style="margin-top: 40px;">
         <div class="wrap">
           <h2>Performance</h2>
@@ -405,11 +418,12 @@ Template Name: トップページ
           ?>
         </div>
       </section>
+      <?php endif; ?>
       <section id="columun" style="padding-bottom:40px;">
         <div class="wrap">
           <h2>Column</h2>
           <hr>
-          <div class="ja">特集</div>
+          <div class="ja">コラム</div>
           <?php
               //　--------- 投稿情報を表示　---------
               $args = array(

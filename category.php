@@ -24,7 +24,7 @@ Template Name: トップページ
           echo $category_display_name;
           ?></h2>
           <hr>
-          <div class="ja"><?php echo $category->name; ?></div>
+          <div class="ja"><?php echo $category->description ? $category->description : $category->name; ?></div>
           <?php
           $current_category_id = get_query_var('cat');
           $post_id = 'category_' . $current_category_id;

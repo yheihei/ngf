@@ -48,11 +48,9 @@ function is_single_tag($tag_slug) {
 	if( !is_single() ) {
 		return false;
 	}
-	var_dump( $tag_slug );
 	$posttags = get_the_tags();
 	if ($posttags) {
 		foreach($posttags as $tag){
-			var_dump( $tag->name );
 			if( $tag->name == $tag_slug ) return true; 
 		}
 	}
